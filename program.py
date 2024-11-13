@@ -29,4 +29,13 @@ while choice.upper() != 'D':
             file.write(name + ", " + email + ", " + addr + "\n")
             print("Record added successfully!")
 
+    def viewRec():
+         filename = "records.txt"  
+    
+    try:
+        with open(filename, 'r') as read_file:
+            print(read_file.read())
+    except FileNotFoundError:
+        print("The file does not exist. Please make sure the file is available.")
+
 
