@@ -38,4 +38,11 @@ while choice.upper() != 'D':
     except FileNotFoundError:
         print("The file does not exist. Please make sure the file is available.")
 
+    def clearRec():
+        filename = "records.txt"  
+        with open(filename, 'w') as file:
+             pass
+        print("All records have been cleared.")
+
+
 
