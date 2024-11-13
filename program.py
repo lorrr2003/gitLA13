@@ -44,5 +44,12 @@ while choice.upper() != 'D':
              pass
         print("All records have been cleared.")
 
-
-
+    def viewRec():
+        filename = "records.txt"  
+    
+    try:
+       
+        with open(filename, 'r') as read_file:
+            print(read_file.read())
+    except FileNotFoundError:
+        print("The file does not exist. Please make sure the file is available.")
